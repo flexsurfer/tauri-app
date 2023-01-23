@@ -1,0 +1,12 @@
+{:source-paths ["src/main/clojure" "../../status-react/src"]
+
+ :dependencies [[reagent/reagent "1.1.1"]
+                [binaryage/oops "0.7.0"]
+                [status-im/timbre "4.10.0-2-status"]]
+
+ :dev-http {1420 "public"}
+
+ :builds {:app {:target :browser
+                :output-dir "public/js"
+                :asset-path "/js"
+                :modules {:main {:init-fn app.core/main}}}}}
