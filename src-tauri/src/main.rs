@@ -13,12 +13,16 @@ fn greet(name: &str) -> String {
 
 #[tauri::command]
 fn sha3(value: &str) -> String {
-    status::sha3(value);
+    match status::sha3(value) {
+        Ok(value) => return value,
+        Err(err) => {eprintln!("Error :( \n  {}", err);
+    return String::from("error2")},
+    };
 }
 
 fn main() {
     tauri::Builder::default()
-        .invoke_handler(tauri::generate_handler![greet])
+        .invoke_handler(tauri::generate_handler![greet, sha3])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }
