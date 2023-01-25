@@ -16,7 +16,7 @@ fn sha3(value: &str) -> String {
     match status::sha3(value) {
         Ok(value) => return value,
         Err(err) => {eprintln!("Error :( \n  {}", err);
-    return String::from("error2")},
+    return String::from("error")},
     };
 }
 

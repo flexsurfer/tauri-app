@@ -8,11 +8,11 @@ fn lib_file() -> String {
     }
     #[cfg(target_os = "macos")]
     {
-        String::from("../shared/libstatus.dylib")
+        String::from("shared/libstatus.dylib")
     }
     #[cfg(target_os = "windows")]
     {
-        String::from("../shared/libstatus.dll")
+        String::from("shared/libstatus.dll")
     }
 }
 
