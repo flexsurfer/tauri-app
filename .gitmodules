@@ -1,0 +1,3 @@
+[submodule "vendor/status-go"]
+	path = vendor/status-go
+	url = git@github.com:status-im/status-go.git

@@ -2381,6 +2381,7 @@ dependencies = [
 name = "tauri-app"
 version = "0.0.0"
 dependencies = [
+ "lazy_static",
  "libloading",
  "serde",
  "serde_json",
